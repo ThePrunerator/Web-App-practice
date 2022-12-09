@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Registration successful
+{% endblock %}
+
+{% block body %}
+    <h1 align = "center">
+        Registration successful.
+        <p>
+            Name: {{ name }}
+        </p>
+
+        <p>
+            Username: {{ username }}
+        </p>
+        
+        <p>
+            Password: {{ password }}
+        </p>
+
+        <div>
+            <a href = "/">Click here to go to the login page.</a>
+        </div>
+    </h1>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Registration
+{% endblock %}
+
+{% block body %}
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+
+    <h1>Please input your personal particulars: </h1>
+    <form autocomplete = "off" method = "post" action = "/checkregister" required>
+        <div>Name: <input type = "text" name = "name" placeholder = "Name"></div>
+        <div>Username: <input type = "text" name = "username" placeholder = "Username"></div>
+        <div>Password: <input type = "text" name = "password" placeholder = "New password"></div>
+        <div><input type = "submit" value = "Register"></div>
+    </form>
+
+{% endblock %}

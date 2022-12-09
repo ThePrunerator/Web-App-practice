@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block body %}
+    <style>
+        body {
+            text-align:center;
+        }
+    </style>
+    <h1>Welcome home, {{ name }}!</h1>
+    <h2>My grades:</h2>
+    <table>
+        {% for test in contents %}
+            <thead>
+                <tr>
+                    <th colspan="2">{{ test[0] }}</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for sub in test[1:] %}
+                    <tr>
+                        {% for ele in sub %}
+                            <td>{{ ele }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        {% endfor %}
+    </table>
+
+    <form action="/addsubjects" method="post" autocomplete="off">
+        <div>Subject name:<div><select name="H level" width="20vw" margin-right="5vw"><option value="H1">H1</option><option value="H2">H2</option><option value="H3">H3</option><input width="50vw" name="subject" placeholder="Subject name" type="text"></div></div>
+        <div>Subject grade:<div><input name="grade" placeholder="Grade" type="text"></div></div>
+        <div>Year:<div><select name="year">
+            <option value="1">One</option>
+            <option value="2">Two</option>
+        </select></div></div>
+        <div>Test name:<div><input name="test" placeholder="Test" type="text"></div></div>
+        <div><input type="submit" value="Add new subject"></div></div>
+    </form>
+
+{% endblock %}

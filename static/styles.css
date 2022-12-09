@@ -1,0 +1,46 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+table {
+    color: black;
+    width: 75vw;
+    background-color: lightgrey;
+    border-collapse: collapse;
+    margin-left: 12vw;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+tr:hover {
+    background-color: grey;
+}
+
+input[type=text], select {
+    width: 75vw;
+    padding: 12px 20px;
+    margin: 8px;
+    display: inline-block;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 75vw;
+    background-color: blue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: darkblue;
+}
